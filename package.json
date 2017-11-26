@@ -1,0 +1,23 @@
+{
+  "name": "zxspectrum48k",
+  "version": "1.0.0",
+  "description": "Website prototype if Sinclair ZX Spectrum 48k personal computer was launched for the first time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesopa/zxspectrum48k.git"
+  },
+  "keywords": [],
+  "author": "Pedro Serapio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mesopa/zxspectrum48k/issues"
+  },
+  "homepage": "https://github.com/mesopa/zxspectrum48k#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
