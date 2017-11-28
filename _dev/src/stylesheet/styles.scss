@@ -55,6 +55,12 @@
  * Additional Styles
  */
 
-body {
-  background-color: #0ecaba;
+.product_gallery-wrap{
+  background-color: #f7f7f7;
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  .gallery_item {
+    border: 1px solid #d3d3d3;
+  }
 }

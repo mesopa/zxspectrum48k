@@ -521,7 +521,7 @@ textarea {
 .grid-container {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  max-width: 75rem;
+  max-width: 54.375rem;
   margin: 0 auto; }
   @media print, screen and (min-width: 40em) {
     .grid-container {
@@ -2421,7 +2421,7 @@ a {
 
 hr {
   clear: both;
-  max-width: 75rem;
+  max-width: 54.375rem;
   height: 0;
   margin: 1.25rem auto;
   border-top: 0;
@@ -4983,21 +4983,21 @@ html.is-reveal-open {
   @media print, screen and (min-width: 40em) {
     .reveal {
       width: 600px;
-      max-width: 75rem; } }
+      max-width: 54.375rem; } }
   .reveal.collapse {
     padding: 0; }
   @media print, screen and (min-width: 40em) {
     .reveal.tiny {
       width: 30%;
-      max-width: 75rem; } }
+      max-width: 54.375rem; } }
   @media print, screen and (min-width: 40em) {
     .reveal.small {
       width: 50%;
-      max-width: 75rem; } }
+      max-width: 54.375rem; } }
   @media print, screen and (min-width: 40em) {
     .reveal.large {
       width: 90%;
-      max-width: 75rem; } }
+      max-width: 54.375rem; } }
   .reveal.full {
     top: 0;
     left: 0;
@@ -5619,5 +5619,9 @@ a.thumbnail {
 /*
  * Additional Styles
  */
-body {
-  background-color: #0ecaba; }
+.product_gallery-wrap {
+  background-color: #f7f7f7;
+  padding-top: 130px;
+  padding-bottom: 130px; }
+  .product_gallery-wrap .gallery_item {
+    border: 1px solid #d3d3d3; }
