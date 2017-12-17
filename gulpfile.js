@@ -29,7 +29,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('images', function(){
-  return gulp.src( src + '/images/*' )
+  return gulp.src( src + '/images/**/*' )
     .pipe(gulp.dest( dist + '/assets/images/' ))
     .pipe(connect.reload());
 });
@@ -37,27 +37,29 @@ gulp.task('images', function(){
 gulp.task('google-fonts', function(){
   return gulp.src( base_path + 'fonts.list' )
     .pipe(googleWebFonts({
-      fontsDir: dist + '/fonts/google/',
-      cssDir: dist + '/css/',
+      fontsDir: dist + '/assets/fonts/google/',
+      cssDir: dist + '/assets/css/',
       cssFilename: 'fonts.css'
     }))
     .pipe(gulp.dest('./'));
 });
 
 gulp.task('google-fonts-css-fix', ['google-fonts'], function(){
-  return gulp.src( dist + '/css/fonts.css')
-    .pipe(replace('url(dist/', 'url(../'))
+  return gulp.src( dist + '/assets/css/fonts.css')
+    .pipe(replace('url(dist/assets/', 'url(../'))
     .pipe(minifyCSS())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(dist + '/css/'));
+    .pipe(gulp.dest(dist + '/assets/css/'));
 });
 
 gulp.task('scripts', function(){
   return gulp.src([
-    'node_modules/jquery/dist/jquery.slim.min.js',
-    'node_modules/popper.js/dist/umd/popper.min.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/popper.js/dist/umd/popper.min.js',
+    'node_modules/lightbox2/dist/js/lightbox.min.js',
+    'node_modules/lazysizes/lazysizes.min.js'
   ])
     .pipe(gulp.dest( dist + '/assets/js/' ));
 });
@@ -70,6 +72,15 @@ gulp.task('bootstrap-sass', function(){
     .pipe(prefixer())
     .pipe(minifyCSS())
     .pipe(rename('bootstrap.min.css'))
+    .pipe(gulp.dest( dist + '/assets/css/' ));
+});
+
+gulp.task('lightbox-sass', function(){
+  return gulp.src( src + '/stylesheet/lightbox.scss' )
+    .pipe(sass())
+    .pipe(prefixer())
+    .pipe(minifyCSS())
+    .pipe(rename('lightbox.min.css'))
     .pipe(gulp.dest( dist + '/assets/css/' ));
 });
 
@@ -108,6 +119,7 @@ gulp.task('default', ['clean'], function(){
     'google-fonts',
     'google-fonts-css-fix',
     'bootstrap-sass',
+    'lightbox-sass',
     'styles-sass',
     'bootstrap-js',
     'scripts',
