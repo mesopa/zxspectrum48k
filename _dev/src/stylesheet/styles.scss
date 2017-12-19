@@ -51,11 +51,38 @@ img {
 
 .gallery-content-wrap {
   background-color: #f7f7f7;
+  position: relative;
+
+  &:after {
+    background-color: #dadada;
+    content: "";
+    display: block;
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    top: -20px;
+    width: 1px;
+  }
 }
 
 /*
  * Specifications
  */
+
+.specifications-content-wrap {
+  position: relative;
+
+  &:after {
+    background-color: #dadada;
+    content: "";
+    display: block;
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    top: -20px;
+    width: 1px;
+  }
+}
 
 .specs-wrap {
   padding-bottom: 0;
@@ -86,26 +113,26 @@ img {
 
   // Tip One
   .spec-tip-one {
-    left: 55px;
+    left: 70px;
     top: 445px;
 
     @include media-breakpoint-up(sm) {
-      left:90px;
+      left:85px;
       top: 10px;
     }
 
     @include media-breakpoint-up(md) {
-      left:135px;
+      left:128px;
       top: 20px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 193px;
+      left: 185px;
       top: 30px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 237px;
+      left: 230px;
       top: 37px;
     }
 
@@ -133,20 +160,30 @@ img {
         margin-bottom: 60px;
       }
     }
+
+    .tip-caption {
+      @include media-breakpoint-down(xs) {
+        position: absolute;
+        text-align: left;
+        top: 20px;
+        left: 60px;
+        width: 200px;
+      }
+    }
   }
 
   // Tip Two
   .spec-tip-two {
-    left: 25px;
+    left: 88px;
     top: 260px;
 
     @include media-breakpoint-up(sm) {
-      left: 125px;
+      left: 112px;
       top: 22px;
     }
 
     @include media-breakpoint-up(md) {
-      left: 190px;
+      left: 182px;
       top: 30px;
     }
 
@@ -214,30 +251,40 @@ img {
         margin-bottom: 60px;
       }
     }
+
+    .tip-caption {
+      @include media-breakpoint-down(xs) {
+        position: absolute;
+        text-align: left;
+        top: 85px;
+        left: 40px;
+        width: 200px;
+      }
+    }
   }
 
   // Tip Three
   .spec-tip-three {
-    left: 57px;
+    left: 77px;
     top: 165px;
 
     @include media-breakpoint-up(sm) {
-      left: 275px;
+      left: 266px;
       top: 15px;
     }
 
     @include media-breakpoint-up(md) {
-      left: 385px;
+      left: 379px;
       top: 23px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 530px;
+      left: 523px;
       top: 30px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 639px;
+      left: 633px;
       top: 41px;
     }
 
@@ -282,30 +329,40 @@ img {
         width: 40px;
       }
     }
+
+    .tip-caption {
+      @include media-breakpoint-down(xs) {
+        position: absolute;
+        text-align: left;
+        top: 15px;
+        left: 50px;
+        width: 200px;
+      }
+    }
   }
 
   // Tip Four
   .spec-tip-four {
-    left: 48px;
+    left: 77px;
     top: 134px;
 
     @include media-breakpoint-up(sm) {
-      left: 290px;
+      left: 282px;
       top: 15px;
     }
 
     @include media-breakpoint-up(md) {
-      left: 405px;
+      left: 400px;
       top: 23px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 560px;
+      left: 555px;
       top: 30px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 677px;
+      left: 670px;
       top: 41px;
     }
 
@@ -349,30 +406,40 @@ img {
         width: 40px;
       }
     }
+
+    .tip-caption {
+      @include media-breakpoint-down(xs) {
+        position: absolute;
+        text-align: left;
+        top: 15px;
+        left: 50px;
+        width: 200px;
+      }
+    }
   }
 
   // Tip Five
   .spec-tip-five {
-    left: 43px;
-    top: 35px;
+    left: 62px;
+    top: 37px;
 
     @include media-breakpoint-up(sm) {
-      left: 353px;
+      left: 345px;
       top: 8px;
     }
 
     @include media-breakpoint-up(md) {
-      left: 490px;
+      left: 483px;
       top: 15px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 672px;
+      left: 667px;
       top: 20px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 810px;
+      left: 805px;
       top: 28px;
     }
 
@@ -423,6 +490,16 @@ img {
         width: 40px;
         margin-bottom: 38px;
       }
+    }
+  }
+
+  .tip-caption {
+    @include media-breakpoint-down(xs) {
+      left: 65px;
+      position: absolute;
+      text-align: left;
+      top: 20px;
+      width: 200px;
     }
   }
 }

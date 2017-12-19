@@ -38,11 +38,33 @@ img {
  * Gallery Section
  */
 .gallery-content-wrap {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  position: relative; }
+  .gallery-content-wrap:after {
+    background-color: #dadada;
+    content: "";
+    display: block;
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    top: -20px;
+    width: 1px; }
 
 /*
  * Specifications
  */
+.specifications-content-wrap {
+  position: relative; }
+  .specifications-content-wrap:after {
+    background-color: #dadada;
+    content: "";
+    display: block;
+    height: 40px;
+    left: 50%;
+    position: absolute;
+    top: -20px;
+    width: 1px; }
+
 .specs-wrap {
   padding-bottom: 0; }
   @media (min-width: 576px) {
@@ -64,23 +86,23 @@ img {
                 transform: translateX(-50%);
         width: 1px; }
   .specs-wrap .spec-tip-one {
-    left: 55px;
+    left: 70px;
     top: 445px; }
     @media (min-width: 576px) {
       .specs-wrap .spec-tip-one {
-        left: 90px;
+        left: 85px;
         top: 10px; } }
     @media (min-width: 768px) {
       .specs-wrap .spec-tip-one {
-        left: 135px;
+        left: 128px;
         top: 20px; } }
     @media (min-width: 992px) {
       .specs-wrap .spec-tip-one {
-        left: 193px;
+        left: 185px;
         top: 30px; } }
     @media (min-width: 1200px) {
       .specs-wrap .spec-tip-one {
-        left: 237px;
+        left: 230px;
         top: 37px; } }
     .specs-wrap .spec-tip-one .line-marker {
       border-radius: 50%;
@@ -101,16 +123,23 @@ img {
       @media (min-width: 576px) {
         .specs-wrap .spec-tip-one .line-marker {
           margin-bottom: 60px; } }
+    @media (max-width: 575px) {
+      .specs-wrap .spec-tip-one .tip-caption {
+        position: absolute;
+        text-align: left;
+        top: 20px;
+        left: 60px;
+        width: 200px; } }
   .specs-wrap .spec-tip-two {
-    left: 25px;
+    left: 88px;
     top: 260px; }
     @media (min-width: 576px) {
       .specs-wrap .spec-tip-two {
-        left: 125px;
+        left: 112px;
         top: 22px; } }
     @media (min-width: 768px) {
       .specs-wrap .spec-tip-two {
-        left: 190px;
+        left: 182px;
         top: 30px; } }
     @media (min-width: 992px) {
       .specs-wrap .spec-tip-two {
@@ -164,24 +193,31 @@ img {
           height: 54px;
           width: 257px;
           margin-bottom: 60px; } }
+    @media (max-width: 575px) {
+      .specs-wrap .spec-tip-two .tip-caption {
+        position: absolute;
+        text-align: left;
+        top: 85px;
+        left: 40px;
+        width: 200px; } }
   .specs-wrap .spec-tip-three {
-    left: 57px;
+    left: 77px;
     top: 165px; }
     @media (min-width: 576px) {
       .specs-wrap .spec-tip-three {
-        left: 275px;
+        left: 266px;
         top: 15px; } }
     @media (min-width: 768px) {
       .specs-wrap .spec-tip-three {
-        left: 385px;
+        left: 379px;
         top: 23px; } }
     @media (min-width: 992px) {
       .specs-wrap .spec-tip-three {
-        left: 530px;
+        left: 523px;
         top: 30px; } }
     @media (min-width: 1200px) {
       .specs-wrap .spec-tip-three {
-        left: 639px;
+        left: 633px;
         top: 41px; } }
     .specs-wrap .spec-tip-three .line-marker {
       border-radius: 50%;
@@ -216,24 +252,31 @@ img {
         .specs-wrap .spec-tip-three .line-marker {
           height: 40px;
           width: 40px; } }
+    @media (max-width: 575px) {
+      .specs-wrap .spec-tip-three .tip-caption {
+        position: absolute;
+        text-align: left;
+        top: 15px;
+        left: 50px;
+        width: 200px; } }
   .specs-wrap .spec-tip-four {
-    left: 48px;
+    left: 77px;
     top: 134px; }
     @media (min-width: 576px) {
       .specs-wrap .spec-tip-four {
-        left: 290px;
+        left: 282px;
         top: 15px; } }
     @media (min-width: 768px) {
       .specs-wrap .spec-tip-four {
-        left: 405px;
+        left: 400px;
         top: 23px; } }
     @media (min-width: 992px) {
       .specs-wrap .spec-tip-four {
-        left: 560px;
+        left: 555px;
         top: 30px; } }
     @media (min-width: 1200px) {
       .specs-wrap .spec-tip-four {
-        left: 677px;
+        left: 670px;
         top: 41px; } }
     .specs-wrap .spec-tip-four .line-marker {
       border-radius: 50%;
@@ -267,24 +310,31 @@ img {
         .specs-wrap .spec-tip-four .line-marker {
           height: 40px;
           width: 40px; } }
+    @media (max-width: 575px) {
+      .specs-wrap .spec-tip-four .tip-caption {
+        position: absolute;
+        text-align: left;
+        top: 15px;
+        left: 50px;
+        width: 200px; } }
   .specs-wrap .spec-tip-five {
-    left: 43px;
-    top: 35px; }
+    left: 62px;
+    top: 37px; }
     @media (min-width: 576px) {
       .specs-wrap .spec-tip-five {
-        left: 353px;
+        left: 345px;
         top: 8px; } }
     @media (min-width: 768px) {
       .specs-wrap .spec-tip-five {
-        left: 490px;
+        left: 483px;
         top: 15px; } }
     @media (min-width: 992px) {
       .specs-wrap .spec-tip-five {
-        left: 672px;
+        left: 667px;
         top: 20px; } }
     @media (min-width: 1200px) {
       .specs-wrap .spec-tip-five {
-        left: 810px;
+        left: 805px;
         top: 28px; } }
     .specs-wrap .spec-tip-five .line-marker {
       border-radius: 50%;
@@ -325,6 +375,13 @@ img {
           height: 40px;
           width: 40px;
           margin-bottom: 38px; } }
+  @media (max-width: 575px) {
+    .specs-wrap .tip-caption {
+      left: 65px;
+      position: absolute;
+      text-align: left;
+      top: 20px;
+      width: 200px; } }
 
 .table-font-small {
   font-size: 0.875rem; }

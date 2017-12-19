@@ -54,6 +54,26 @@ gulp.task('google-fonts-css-fix', ['google-fonts'], function(){
     .pipe(gulp.dest(dist + '/assets/css/'));
 });
 
+gulp.task('fontawesome-fonts', function(){
+  return gulp.src( base_path + 'node_modules/font-awesome/fonts/*' )
+    .pipe(gulp.dest(dist + '/assets/fonts/font-awesome/'));
+});
+
+gulp.task('fontawesome-sass', function(){
+  return gulp.src( src + '/stylesheet/font-awesome.scss' )
+    .pipe(sass({
+      includePaths: [
+        'node_modules/font-awesome/scss'
+      ]
+    }))
+    .pipe(prefixer())
+    .pipe(minifyCSS())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(dist + '/assets/css/'));
+});
+
 gulp.task('scripts', function(){
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
@@ -118,6 +138,8 @@ gulp.task('default', ['clean'], function(){
     'images',
     'google-fonts',
     'google-fonts-css-fix',
+    'fontawesome-fonts',
+    'fontawesome-sass',
     'bootstrap-sass',
     'lightbox-sass',
     'styles-sass',
