@@ -33,6 +33,8 @@ img {
     position: absolute;
     right: 0;
     width: 100%; }
+  .header-content-wrap .middle-element {
+    bottom: -60px; }
 
 /*
  * Gallery Section

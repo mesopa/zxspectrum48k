@@ -74,7 +74,7 @@ gulp.task('fontawesome-sass', function(){
     .pipe(gulp.dest(dist + '/assets/css/'));
 });
 
-gulp.task('scripts', function(){
+gulp.task('no-compile-scripts', function(){
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/popper.js/dist/umd/popper.min.js',
@@ -82,6 +82,14 @@ gulp.task('scripts', function(){
     'node_modules/lazysizes/lazysizes.min.js'
   ])
     .pipe(gulp.dest( dist + '/assets/js/' ));
+});
+
+gulp.task('compile-scripts', function(){
+  return gulp.src( src + '/javascript/scripts.js')
+    .pipe(uglify())
+    .pipe(rename('scripts.min.js'))
+    .pipe(gulp.dest( dist + '/assets/js/' ))
+    .pipe(connect.reload());;
 });
 
 gulp.task('bootstrap-sass', function(){
@@ -126,6 +134,7 @@ gulp.task('bootstrap-js', function(){
 gulp.task('watch', function(){
   gulp.watch( src + '/*.html', ['html'] );
   gulp.watch( src + '/stylesheet/*.scss', ['styles-sass'] );
+  gulp.watch( src + '/javascript/scripts.js', ['compile-scripts'] );
 });
 
 gulp.task('clean', function(){
@@ -144,7 +153,8 @@ gulp.task('default', ['clean'], function(){
     'lightbox-sass',
     'styles-sass',
     'bootstrap-js',
-    'scripts',
+    'no-compile-scripts',
+    'compile-scripts',
     'connect',
     'watch');
 });
