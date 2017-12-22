@@ -2,7 +2,7 @@
 	font-family: 'Ubuntu';
 	font-style: normal;
 	font-weight: 300;
-	src: url(dist/assets/fonts/google/Ubuntu-normal-300.woff) format('woff');
+	src: url(docs/assets/fonts/google/Ubuntu-normal-300.woff) format('woff');
 	unicode-range: U+0-10FFFF;
 }
 
@@ -10,7 +10,7 @@
 	font-family: 'Ubuntu';
 	font-style: normal;
 	font-weight: 700;
-	src: url(dist/assets/fonts/google/Ubuntu-normal-700.woff) format('woff');
+	src: url(docs/assets/fonts/google/Ubuntu-normal-700.woff) format('woff');
 	unicode-range: U+0-10FFFF;
 }
 

@@ -13,7 +13,7 @@ var gulp           = require('gulp'),
 
 const base_path = './',
       src       = base_path + '_dev/src',
-      dist      = base_path + 'dist';
+      dist      = base_path + 'docs';
 
 gulp.task('connect', function(){
   connect.server({
@@ -46,7 +46,7 @@ gulp.task('google-fonts', function(){
 
 gulp.task('google-fonts-css-fix', ['google-fonts'], function(){
   return gulp.src( dist + '/assets/css/fonts.css')
-    .pipe(replace('url(dist/assets/', 'url(../'))
+    .pipe(replace('url(docs/assets/', 'url(../'))
     .pipe(minifyCSS())
     .pipe(rename({
       suffix: '.min'
