@@ -12,6 +12,7 @@ $(document).ready(function () {
       var $backgroundObj = $(this);
 
       $backgroundObj.__speed = ($backgroundObj.data('speed') || 1);
+      $backgroundObj.__offset= ($backgroundObj.data('offset') || 0);
       $backgroundObj.__fgOffset = $backgroundObj.offset().top;
       $backgrounds.push($backgroundObj);
     });
@@ -22,7 +23,7 @@ $(document).ready(function () {
 
       $backgrounds.forEach(function ($backgroundObj) {
         var windowWidth = $(window).width();
-        var yPos = -((scrollTop - $backgroundObj.__fgOffset) / $backgroundObj.__speed + 100);
+        var yPos = ((scrollTop - $backgroundObj.__fgOffset) / $backgroundObj.__speed + $backgroundObj.__offset);
 
         // return if window width less than 768px
         if( windowWidth < 767 ) {
@@ -33,14 +34,26 @@ $(document).ready(function () {
         }
 
         $backgroundObj.css({
-          bottom: yPos + 'px'
+          transform: 'translateY(' + yPos + 'px)'
         });
       });
     });
 
-    // triggers winodw scroll for refresh
+    // triggers window scroll for refresh
     $fwindow.trigger('scroll');
   };
 
-  parallaxIt();
+  // only after fully load the image then can apply the parallax effect
+  var img = new Image();
+  img.onload = function() {
+    imgPlaceholder = document.getElementById('zx-top-image');
+    imgPlaceholder.appendChild(img);
+
+    parallaxIt();
+  };
+  img.src = 'assets/images/zx-spectrum/zx-spectrum-48k-header.jpg';
+  img.alt = 'ZX Spectrum 48k';
+  img.width = 1140;
+  img.height = 304;
+  img.className = 'img-fluid';
 });

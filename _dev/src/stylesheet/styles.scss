@@ -36,16 +36,16 @@ img {
   background-color: white;
   overflow: hidden;
 
+  .header-bk-elem {
+    transform: translateY(60px);
+  }
+
   .header-element {
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
     width: 100%;
-  }
-
-  .middle-element {
-    bottom: -60px;
   }
 }
 

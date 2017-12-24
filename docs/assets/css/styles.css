@@ -27,14 +27,15 @@ img {
 .header-content-wrap {
   background-color: white;
   overflow: hidden; }
+  .header-content-wrap .header-bk-elem {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px); }
   .header-content-wrap .header-element {
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
     width: 100%; }
-  .header-content-wrap .middle-element {
-    bottom: -60px; }
 
 /*
  * Gallery Section
