@@ -54,7 +54,10 @@ img {
  */
 
 .gallery-content-wrap {
-  background-color: #f7f7f7;
+  background-image: url("../images/common/zx-gallery-background-element.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative;
 
   &:after {
@@ -68,6 +71,25 @@ img {
     width: 1px;
   }
 }
+
+.gallery-content-wrap {
+  .gallery-item {
+    a {
+      img {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      &:focus, &:hover {
+        img {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+
 
 /*
  * Specifications

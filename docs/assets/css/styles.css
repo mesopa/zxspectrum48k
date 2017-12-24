@@ -41,7 +41,10 @@ img {
  * Gallery Section
  */
 .gallery-content-wrap {
-  background-color: #f7f7f7;
+  background-image: url("../images/common/zx-gallery-background-element.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative; }
   .gallery-content-wrap:after {
     background-color: #dadada;
@@ -52,6 +55,14 @@ img {
     position: absolute;
     top: -20px;
     width: 1px; }
+
+.gallery-content-wrap .gallery-item a img {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out; }
+
+.gallery-content-wrap .gallery-item a:focus img, .gallery-content-wrap .gallery-item a:hover img {
+  opacity: 0.8; }
 
 /*
  * Specifications
