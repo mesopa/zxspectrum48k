@@ -6,6 +6,7 @@ var gulp           = require('gulp'),
     prefixer       = require('gulp-autoprefixer'),
     uglify         = require('gulp-uglify'),
     minifyCSS      = require('gulp-clean-css'),
+    htmlmin        = require('gulp-htmlmin'),
     connect        = require('gulp-connect'),
     replace        = require('gulp-replace'),
     rename         = require('gulp-rename'),
@@ -24,6 +25,10 @@ gulp.task('connect', function(){
 
 gulp.task('html', function(){
   return gulp.src( src + '/*.html' )
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      collapseInlineTagWhitespace: true
+    }))
     .pipe(gulp.dest( dist ))
     .pipe(connect.reload());
 });
@@ -67,7 +72,9 @@ gulp.task('fontawesome-sass', function(){
       ]
     }))
     .pipe(prefixer())
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({
+      level: {1: {specialComments: 0}}
+    }))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -76,7 +83,7 @@ gulp.task('fontawesome-sass', function(){
 
 gulp.task('no-compile-scripts', function(){
   return gulp.src([
-    'node_modules/jquery/dist/jquery.min.js',
+    //'node_modules/jquery/dist/jquery.min.js', Only for local development
     'node_modules/popper.js/dist/umd/popper.min.js',
     'node_modules/lightbox2/dist/js/lightbox.min.js',
     'node_modules/lazysizes/lazysizes.min.js'
@@ -98,7 +105,9 @@ gulp.task('bootstrap-sass', function(){
       includePaths: 'node_modules/bootstrap/scss'
     }))
     .pipe(prefixer())
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({
+      level: {1: {specialComments: 0}}
+    }))
     .pipe(rename('bootstrap.min.css'))
     .pipe(gulp.dest( dist + '/assets/css/' ));
 });
@@ -117,8 +126,9 @@ gulp.task('styles-sass', function(){
     .pipe(sass({
       includePaths: 'node_modules/bootstrap/scss'
     }))
+    .pipe(minifyCSS())
     .pipe(prefixer())
-    .pipe(rename('styles.css'))
+    .pipe(rename('styles.min.css'))
     .pipe(gulp.dest( dist + '/assets/css/' ))
     .pipe(connect.reload());
 });
