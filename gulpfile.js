@@ -8,6 +8,7 @@ var gulp           = require('gulp'),
     minifyCSS      = require('gulp-clean-css'),
     htmlmin        = require('gulp-htmlmin'),
     connect        = require('gulp-connect'),
+    concat         = require('gulp-concat'),
     replace        = require('gulp-replace'),
     rename         = require('gulp-rename'),
     del            = require('del');
@@ -151,20 +152,47 @@ gulp.task('clean', function(){
   return del( dist + '/*' );
 });
 
-gulp.task('default', ['clean'], function(){
-  gulp.start(
-    'html',
-    'images',
+gulp.task('concat-styles', [
     'google-fonts',
     'google-fonts-css-fix',
     'fontawesome-fonts',
     'fontawesome-sass',
     'bootstrap-sass',
     'lightbox-sass',
-    'styles-sass',
+    'styles-sass' ], function(){
+  return gulp.src([
+     dist + '/assets/css/bootstrap.min.css',
+     dist + '/assets/css/lightbox.min.css',
+     dist + '/assets/css/font-awesome.min.css',
+     dist + '/assets/css/fonts.min.css',
+     dist + '/assets/css/styles.min.css'
+    ])
+    .pipe(concat('app.mim.css'))
+    .pipe(gulp.dest( dist + '/assets/css/' ));
+});
+
+gulp.task('concat-scripts', [
     'bootstrap-js',
     'no-compile-scripts',
-    'compile-scripts',
+    'compile-scripts' ], function(){
+  return gulp.src([
+      dist + '/assets/js/popper.min.js',
+      dist + '/assets/js/bootstrap.min.js',
+      dist + '/assets/js/lightbox.min.js',
+      dist + '/assets/js/lazysizes.min.js',
+      dist + '/assets/js/scripts.min.js'
+    ])
+    .pipe(concat('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest( dist + '/assets/js/' ));
+});
+
+gulp.task('default', ['clean'], function(){
+  gulp.start(
+    'html',
+    'images',
+    'concat-styles',
+    'concat-scripts',
     'connect',
     'watch');
 });
