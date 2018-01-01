@@ -1,13 +1,13 @@
 $(document).ready(function () {
-  // makes the parallax elements
+  // Makes the parallax elements
   function parallaxIt() {
-    // create variables
+    // Create variables
     var $fwindow = $(window);
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     var $backgrounds = [];
 
-    // for each of background parallax element
+    // For each of background parallax element
     $('[data-type="background"]').each(function () {
       var $backgroundObj = $(this);
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
       $backgrounds.push($backgroundObj);
     });
 
-    // update positions
+    // Update positions
     $fwindow.on('scroll resize', function () {
       scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
         var windowWidth = $(window).width();
         var yPos = ((scrollTop - $backgroundObj.__fgOffset) / $backgroundObj.__speed + $backgroundObj.__offset);
 
-        // return if window width less than 768px
+        // Return if window width less than 768px
         if( windowWidth < 767 ) {
           $backgroundObj.css({
             bottom: ''
@@ -39,11 +39,13 @@ $(document).ready(function () {
       });
     });
 
-    // triggers window scroll for refresh
+    // Triggers window scroll for refresh
     $fwindow.trigger('scroll');
   };
 
-  // only after fully load the image then can apply the parallax effect
+  // Only after fully load the image then can apply the parallax effect
+  // Replaced with SVG placeholder
+  /*
   var img = new Image();
   img.onload = function() {
     imgPlaceholder = document.getElementById('zx-top-image');
@@ -56,4 +58,7 @@ $(document).ready(function () {
   img.width = 1140;
   img.height = 304;
   img.className = 'img-fluid';
+  */
+
+  parallaxIt();
 });
