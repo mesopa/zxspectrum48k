@@ -169,7 +169,7 @@ return gulp.src([
    dist + '/assets/css/fonts.min.css',
    dist + '/assets/css/styles.min.css'
   ])
-  .pipe(concat('app.mim.css'))
+  .pipe(concat('app.min.css'))
   .pipe(gulp.dest( dist + '/assets/css/' ));
 });
 
@@ -200,7 +200,7 @@ gulp.task('watch-concat-styles', ['styles-sass'], function(){
     dist + '/assets/css/fonts.min.css',
     dist + '/assets/css/styles.min.css'
    ])
-   .pipe(concat('app.mim.css'))
+   .pipe(concat('app.min.css'))
    .pipe(gulp.dest( dist + '/assets/css/' ))
    .pipe(connect.reload());
 });
