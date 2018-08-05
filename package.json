@@ -27,11 +27,8 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-inline-source": "^3.2.0",
     "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
-    "webpack": "^4.16.4",
-    "webpack-stream": "^5.1.0"
+    "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.2.0",

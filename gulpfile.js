@@ -11,7 +11,6 @@ var gulp           = require('gulp'),
     htmlmin        = require('gulp-htmlmin'),
     connect        = require('gulp-connect'),
     concat         = require('gulp-concat'),
-    replace        = require('gulp-replace'),
     inlinesource   = require('gulp-inline-source'),
     rename         = require('gulp-rename'),
     del            = require('del');
