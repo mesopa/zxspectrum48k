@@ -163,27 +163,32 @@ img {
 
   // Tip One
   .spec-tip-one {
-    left: 70px;
+    left: 22px;
     top: 445px;
 
     @include media-breakpoint-up(sm) {
-      left:85px;
+      left: 107px;
       top: 10px;
     }
 
     @include media-breakpoint-up(md) {
-      left:128px;
-      top: 20px;
+      left: 152px;
+      top: 18px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 185px;
-      top: 30px;
+      left: 209px;
+      top: 28px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 230px;
-      top: 37px;
+      left: 253px;
+      top: 36px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 260px;
+      top: 38px;
     }
 
     .line-marker {
@@ -219,21 +224,60 @@ img {
         left: 60px;
         width: 200px;
       }
+
+      @include media-breakpoint-up(sm) {
+        position: absolute;
+        text-align: left;
+        top: 96px;
+        left: -22px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        text-align: left;
+        top: 100px;
+        left: -20px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        text-align: left;
+        top: 97px;
+        left: -17px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        position: absolute;
+        text-align: left;
+        top: 97px;
+        left: -20px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        position: absolute;
+        text-align: left;
+        top: 100px;
+        left: -16px;
+      }
     }
   }
 
   // Tip Two
   .spec-tip-two {
-    left: 88px;
+    left: 40px;
     top: 260px;
 
     @include media-breakpoint-up(sm) {
-      left: 112px;
+      left: 149px;
       top: 22px;
     }
 
     @include media-breakpoint-up(md) {
-      left: 182px;
+      left: 194px;
       top: 30px;
     }
 
@@ -244,6 +288,11 @@ img {
 
     @include media-breakpoint-up(xl) {
       left: 307px;
+      top: 49px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 318px;
       top: 49px;
     }
 
@@ -310,32 +359,76 @@ img {
         left: 40px;
         width: 200px;
       }
+
+      @include media-breakpoint-up(sm) {
+        position: absolute;
+        text-align: left;
+        top: 46px;
+        left: -37px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        text-align: left;
+        top: 52px;
+        left: -9px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        text-align: left;
+        top: 117px;
+        left: 40px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        position: absolute;
+        text-align: left;
+        top: 115px;
+        left: 40px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        position: absolute;
+        text-align: left;
+        top: 114px;
+        left: 40px;
+      }
     }
   }
 
   // Tip Three
   .spec-tip-three {
-    left: 77px;
+    left: 27px;
     top: 165px;
 
     @include media-breakpoint-up(sm) {
-      left: 266px;
+      left: 302px;
       top: 15px;
     }
 
     @include media-breakpoint-up(md) {
-      left: 379px;
+      left: 406px;
       top: 23px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 523px;
+      left: 547px;
       top: 30px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 633px;
+      left: 657px;
       top: 41px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 670px;
+      top: 44px;
     }
 
     .line-marker {
@@ -388,32 +481,76 @@ img {
         left: 50px;
         width: 200px;
       }
+
+      @include media-breakpoint-up(sm) {
+        position: absolute;
+        text-align: left;
+        top: 92px;
+        left: -26px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        text-align: left;
+        top: 89px;
+        left: -26px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        text-align: left;
+        top: 107px;
+        left: -18px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        position: absolute;
+        text-align: left;
+        top: 107px;
+        left: -13px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        position: absolute;
+        text-align: left;
+        top: 110px;
+        left: -19px;
+      }
     }
   }
 
   // Tip Four
   .spec-tip-four {
-    left: 77px;
+    left: 27px;
     top: 134px;
 
     @include media-breakpoint-up(sm) {
-      left: 282px;
+      left: 321px;
       top: 15px;
     }
 
     @include media-breakpoint-up(md) {
-      left: 400px;
+      left: 435px;
       top: 23px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 555px;
+      left: 587px;
       top: 30px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 670px;
+      left: 700px;
       top: 41px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 715px;
+      top: 44px;
     }
 
     .line-marker {
@@ -465,31 +602,75 @@ img {
         left: 50px;
         width: 200px;
       }
+
+      @include media-breakpoint-up(sm) {
+        position: absolute;
+        text-align: left;
+        top: 69px;
+        left: -4px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        text-align: left;
+        top: 68px;
+        left: -32px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        text-align: left;
+        top: 86px;
+        left: -15px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        position: absolute;
+        text-align: left;
+        top: 83px;
+        left: -19px;
+        width: 200px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        position: absolute;
+        text-align: left;
+        top: 84px;
+        left: -19px;
+      }
     }
   }
 
   // Tip Five
   .spec-tip-five {
-    left: 62px;
+    left: 15px;
     top: 37px;
 
     @include media-breakpoint-up(sm) {
-      left: 345px;
-      top: 8px;
+      left: 380px;
+      top: 8px
     }
 
     @include media-breakpoint-up(md) {
-      left: 483px;
+      left: 516px;
       top: 15px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: 667px;
+      left: 695px;
       top: 20px;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 805px;
+      left: 833px;
+      top: 28px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 850px;
       top: 28px;
     }
 
@@ -549,6 +730,46 @@ img {
       position: absolute;
       text-align: left;
       top: 20px;
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: -28px;
+      position: absolute;
+      text-align: left;
+      top: 51px;
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: -29px;
+      position: absolute;
+      text-align: left;
+      top: 61px;
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      left: -23px;
+      position: absolute;
+      text-align: left;
+      top: 83px;
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: -23px;
+      position: absolute;
+      text-align: left;
+      top: 86px;
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: -25px;
+      position: absolute;
+      text-align: left;
+      top: 84px;
       width: 200px;
     }
   }
